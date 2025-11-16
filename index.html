@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANAS ZOUZOU - Professional Portfolio</title>
+    <meta name="description" content="Professional portfolio of Anas Zouzou - Computer Science Student, Programmer, and Cybersecurity Enthusiast">
+    <meta name="keywords" content="Anas Zouzou, Computer Science, Programming, Cybersecurity, Portfolio">
+    <meta property="og:title" content="ANAS ZOUZOU - Professional Portfolio">
+    <meta property="og:description" content="Computer Science Student | Programmer | Cybersecurity Enthusiast">
+    <meta name="twitter:title" content="ANAS ZOUZOU - Professional Portfolio">
+    <meta name="twitter:description" content="Computer Science Student | Programmer | Cybersecurity Enthusiast">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0056b3;
+            --accent-color: #cce7ff;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-[var(--bg-light)] text-[var(--text-dark)];
+        }
+        
+        h1, h2, h3 {
+            @apply text-[var(--primary-color)];
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-[var(--secondary-color)] hover:shadow-lg;
+        }
+        
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            @apply block w-16 h-1 bg-[var(--primary-color)] mx-auto mt-4;
+        }
+        
+        .card {
+            @apply bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Navigation.js"></script>
+    <script type="text/babel" src="components/About.js"></script>
+    <script type="text/babel" src="components/Skills.js"></script>
+    <script type="text/babel" src="components/Experience.js"></script>
+    <script type="text/babel" src="components/Languages.js"></script>
+    <script type="text/babel" src="components/Contact.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
